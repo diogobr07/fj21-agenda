@@ -1,23 +1,32 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib tagdir="/WEB-INF/tags" prefix="caelum" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Agenda de Contos -Adciona Contato</title>
-	<link href="css/jquery.css" rel="stylesheet" />
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/jquery-ui.js"></script>
-</head>
-<body>
-	<c:import url="cabecalho.jsp" />
-	<form action="adcionaContato">
-		Nome: <input type="text" name="nome"/><br />
-		E-mail: <input type="text" name="email" /><br />
-		Endereco: <input type="text" name="endereco" /><br />
-		<caelum:campoData label="Data de Nascimento:" id="dataNascimento" /><br />
-		<input type="submit" value="Gravar" />
-	</form>
-	<c:import url="rodape.jsp" />
-</body>
-</html>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib tagdir="/WEB-INF/tags" prefix="caelum"%>
+<c:import url="cabecalho.jsp" />
+<form action="adcionaContato" class="form-horizontal" role="form">
+	<div class="form-group">
+		<label for="nome" class="col-sm-2 control-label">Nome:</label>
+		<div class="col-sm-10">
+			<input class="form-control" type="text" name="nome" id="nome" />
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="email" class="col-sm-2 control-label">E-mail:</label>
+		<div class="col-sm-10">
+			<input type="text" name="email" id="email" class="form-control" />
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="endereco" class="col-sm-2 control-label">Endereco:</label>
+		<div class="col-sm-10">
+			<input type="text" name="endereco" id="endereco" class="form-control" />
+		</div>
+	</div>
+	<div class="form-group">
+		<caelum:campoData label="Data de Nascimento:" id="dataNascimento" />
+	</div>
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+			<input class="btn btn-primary" type="submit" value="Gravar" />
+		</div>
+	</div>
+</form>
+<c:import url="rodape.jsp" />
