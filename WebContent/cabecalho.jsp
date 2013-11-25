@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Agenda de Contos</title>
+	<title>Agenda de Contatos</title>
 	<link href="css/jquery.css" rel="stylesheet" />
 	<link href="css/bootstrap.min.css" rel="stylesheet" />
 	<link href="css/bootstrap.theme.min.css" rel="stylesheet" />
