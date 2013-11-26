@@ -10,6 +10,11 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   
+  <error-page>
+      <error-code>404</error-code>
+      <location>/erro404.html</location>
+  </error-page>
+  
   <servlet>
       <servlet-name>serveltOiMundo</servlet-name>
       <servlet-class>br.com.caelum.servlet.OiMundo</servlet-class>
@@ -18,15 +23,6 @@
   <servlet-mapping>
       <servlet-name>serveltOiMundo</servlet-name>
       <url-pattern>/oi</url-pattern>
-  </servlet-mapping>
-  
-  <servlet>
-      <servlet-name>AdcionaContato</servlet-name>
-      <servlet-class>br.com.caelum.agenda.servlet.AdicionaContatoServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-      <servlet-name>AdcionaContato</servlet-name>
-      <url-pattern>/adcionaContato</url-pattern>
   </servlet-mapping>
   
   <servlet>
@@ -46,6 +42,16 @@
   
   <filter-mapping>
       <filter-name>cronometro</filter-name>
+      <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <filter>
+      <filter-name>FiltroConexao</filter-name>
+      <filter-class>br.com.caelum.agenda.filtro.FiltroConexao</filter-class>
+  </filter>
+ 
+  <filter-mapping>
+      <filter-name>FiltroConexao</filter-name>
       <url-pattern>/*</url-pattern>
   </filter-mapping>
   

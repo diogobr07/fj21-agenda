@@ -4,8 +4,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 
 <c:import url="cabecalho.jsp" />
-<!-- cria o DAO -->
-<jsp:useBean id="dao" class="br.com.caelum.agenda.dao.ContatoDao" />
 
 <table class="table">
 	<!-- percorre contatos -->
@@ -15,7 +13,7 @@
 		<th>endereco</th>
 		<th>data de nascimento</th>
 	</tr>
-	<c:forEach var="contato" items="${dao.lista}" varStatus="id">
+	<c:forEach var="contato" items="${contatos}" varStatus="id">
 		<tr bgcolor="#${id.count % 2 == 0 ? 'fefefe' : 'cecece' }">
 			<td>${contato.nome}</td>
 			<td><c:if test="${not empty contato.email}">

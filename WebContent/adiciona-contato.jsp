@@ -1,7 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib tagdir="/WEB-INF/tags" prefix="caelum"%>
 <c:import url="cabecalho.jsp" />
-<form action="adcionaContato" class="form-horizontal" role="form">
+<form action="mvc" class="form-horizontal" role="form">
 	<div class="form-group">
 		<label for="nome" class="col-sm-2 control-label">Nome:</label>
 		<div class="col-sm-10">
@@ -28,5 +28,6 @@
 			<input class="btn btn-primary" type="submit" value="Gravar" />
 		</div>
 	</div>
+	<input type="hidden" name="logica" value="AdicionaContatoLogic" />
 </form>
 <c:import url="rodape.jsp" />
